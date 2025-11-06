@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .wapper{
+            display: flex;
+            height: 600px;
+            text-align: center;
+            color: aliceblue;
+            justify-content: space-between;
+        }
+        .content{
+            flex:1 1 0;
+            background-color: beige;
+        }
+        .left{
+            flex: 0 0 auto;
+            width: 200px;
+            background-color: aqua;
+        }
+        .right{
+            flex: 0 0 auto;
+            width: 200px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="wapper">
+        <div class="left">LEFT</div>
+        <div class="content">CONTENT</div>
+        <div class="right">RIGHT</div>
+    </div>
+</body>
+</html>

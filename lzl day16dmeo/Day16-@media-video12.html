@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 做响应式页面，第一步设置完美视口，设置meta元信息-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 媒体查询的权重和外边一样 
+        媒体查询只有满足条件才生效，媒体查询外的不论什么时候都生效*/
+        body{
+            margin: 0;
+            background-color: aqua;
+        }
+        h1{
+            text-align: center;
+            font-size: 4em;
+            color: aliceblue;
+        }
+        /* 当视口宽度小于800px时，才能生效的样式 */
+        @media (max-width:800px) {
+            body{
+                background-color: aquamarine;
+            }
+        }
+        /* 当视口宽度大于等于900px时，才能生效的样式 */
+        @media(min-width:900px){
+            h1{
+                color: chartreuse;
+            }
+        }
+        /* 设置最大屏幕宽度，这个不能通过调视口看效果，屏幕不能改变，但是可以通过工具查看样式 */
+        @media(max-device-width){
+            h1{
+                font-style: italic;
+            }
+        }
+        /* 专门针对屏幕设置样式 */
+        /* @media screen {
+            h1{
+                text-align: center;
+            }
+        } */
+        /* 针对打印机设置样式 */
+        /* @media print{
+
+            h1{
+                text-align: center;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <!-- 响应式布局其实就是根据移动端进行适配 -->
+    <h1>媒体特性</h1>
+</body>
+</html>

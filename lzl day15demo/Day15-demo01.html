@@ -1,0 +1,111 @@
+<!-- Demo-me -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>等分布局me</title>
+    <style>
+        .wapper{
+            column-count: 5;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="wapper">
+        <div class="image"><img src="./images copy/01天猫.png" alt=""></div>
+        <span class="text">天猫</span>
+        <div class="image"><img src="./images copy/02聚划算.png" alt=""></div>
+        <span class="text">聚划算</span>
+        <div class="image"><img src="./images copy/03天猫国际.png" alt=""></div>
+        <span class="text">天猫国际</span>
+        <div class="image"><img src="./images copy/04外卖.png" alt=""></div>
+        <span class="text">外卖</span>
+        <div class="image"><img src="./images copy/05天猫超市.png" alt=""></div>
+        <span class="text">天猫超市</span>
+        <div class="image"><img src="./images copy/06充值中心.png" alt=""></div>
+        <span class="text">充值中心</span>
+        <div class="image"><img src="./images copy/07飞猪旅行.png" alt=""></div>
+        <span class="text">飞猪旅行</span>
+        <div class="image"><img src="./images copy/08淘达人.png" alt=""></div>
+        <span class="text">淘达人</span>
+        <div class="image"><img src="./images copy/09拍卖中心.png" alt=""></div>
+        <span class="text">拍卖中心</span>
+        <div class="image"><img src="./images copy/10分类.png" alt=""></div>
+        <span class="text">分类</span>
+    </div>
+</body>
+</html> -->
+
+<!-- content of courses-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row{
+            display: flex;
+        }
+        .row a{
+            /* 伸缩项目把父元素平分 flex是给伸缩项目设置的css复合属性*/
+            flex:1 1 0;
+            display: flex;
+            /* 为什么设置这个以后图片变大 因为主轴方向变成竖着的
+            侧轴的对齐方式align-items的默认值是stretch，默认拉伸*/
+            flex-direction: column;
+            align-items: center;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+ </head>
+ <body>
+    <div class="row">
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+    </div>
+    <div class="row">
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+        <a href="#">
+            <img src="./images copy/01天猫.png" alt="">
+            <span>天猫</span>
+        </a>
+    </div>
+ </body>
+ </html>

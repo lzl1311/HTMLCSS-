@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>响应式布局</title>
+    <style>
+        /* Reset Style Sheet  start*/
+        * { font-family: Arial; font-size: 14px; margin: 0; padding: 0; border: none; }
+        a { text-decoration: none; }
+        ul { list-style: none; }
+        img {display: block; }
+        /* Reset Style Sheet  end*/
+
+        /* GlobalStyle start */
+        body{
+            background-color: #efefef;
+        }
+        /* GlobalStyle end */
+
+        /* page-header start */
+        .page-header{
+            display: flex;
+            height: 40px;
+            padding: 8px 0 15px;
+            background-color: #88c5e1;
+            border-bottom: 5px solid #54abd4;
+            position: relative;
+        }
+        .search-box{
+            width: 60%;   
+            display: flex; 
+        }
+        .search-box input{
+            box-sizing: border-box;
+            width: 80%;
+            height: 40px;
+            padding: 0 10px;
+            border: 1px solid #ccc;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .search-box button{
+            width: 20%;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        .page-nav{
+            display: flex;
+            width: 15%;
+        }
+        .page-nav .menu-btn{
+            padding: 9px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: auto;
+        }
+        .menu-btn span{
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: #888;   
+        }
+        .menu-btn span:not(:last-child){
+            margin-bottom: 5px;
+        }
+        .nav-list{
+            overflow: hidden;
+            height: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 68px;
+            background-color:#88c5e1;
+            transition-duration: 600ms;
+        }
+        .nav-list li{
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+        .nav-list li a{
+            color: #ffffff;
+            font-size: 12px;
+        }
+        .menu-btn:active +.nav-list{
+           height: 160px;
+        }
+        .logo{
+            width: 25%;
+            background-image: url("images/Brand-S.png");
+            background-repeat: no-repeat;
+            background-size: auto 40px;
+            background-position: center;
+        }
+        /* 方案二 设置css属性背景图片的显示*/
+       @media(min-width:640px){
+        .logo{
+            background-image: url("images/Brand-M.png");
+        }
+        .search-box{
+            width: 50%;
+        }
+        .page-nav{
+            width: 25%;
+        }
+        .menu-btn{
+            display: none;
+        }
+        .nav-list{
+            height: 40px;
+            width: 100%;
+            display: flex;
+            position: static; 
+            justify-content: space-around;
+        }
+        /* .nav-list li{
+           flex: 1 1 0;
+        } */
+       }
+       @media(min-width:1024px){
+        .logo{
+            background-image: url("images/Brand-L.png");
+        }
+       }
+        /* .logo img{
+            height: 40px;
+            margin: 0 auto;
+        } */
+        /* 
+        方案一：多个图片控制隐藏显示，
+        在移动显示设置三个图片，但是隐藏其他两个，设置@media当
+        视口宽度变化时应该显示对应的图片，隐藏其他， 
+        */
+        /* .small-log{
+            display: block;
+        }
+        .middle-log{
+            display: none;
+        }
+        .large-log{
+            display: none;
+        }
+        @media(min-width:640px){
+            .small-log{
+                display: none;
+            }
+            .middle-log{
+                display: block;
+            }
+            .large-log{
+                display: none;
+            }
+        }
+        @media(min-width:1024px){
+            .small-log{
+                display: none;
+            }
+            .middle-log{
+                display: none;
+            }
+            .large-log{
+                display: block;
+            }
+        } */
+        /* page-header end */
+
+        /* banner start */
+        .banner img{
+            width: 100%;
+        }
+        /* banner end */
+
+        /* content start */
+        .content{
+            width: 100%;
+            column-count: 1;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .content .photo img{
+            width: 100%;
+        }
+        .content .photo span{
+            display: block;
+            width: 100%;
+            background-color: #fff;
+            text-align: center;
+            font-size: 1.5em;
+            padding: 20px 0;
+        }
+        @media(min-width:640px){
+        .content{
+            width: 100%;
+            column-count: 2;
+            text-align: center;
+        }
+       }
+       @media(min-width:1024px){
+        .content{
+            column-count: 4;
+        }
+       }
+        /* content end */
+    </style>
+</head>
+<body>
+        <header class="page-header">
+            <a href="#" class="logo">
+                <!-- <img src="./images/Brand-S.png" alt="logo" class="small-log">
+                <img src="./images/Brand-M.png" alt="" class="middle-log">
+                <img src="./images/Brand-L.png" alt="" class="large-log"> -->
+            </a>
+
+            <form action="#" class="search-box">
+                <input type="search">
+                <button>搜索</button>
+            </form>
+            <nav class="page-nav">
+                <button class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">公告</a></li>
+                    <li><a href="#">登录</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="banner">
+           <!-- 方案三 从上到下以此判断是否满足条件，加载图片，后面不再执行-->
+            <picture>
+                <source srcset="./images/Banner-L.png" media="(min-width:1024px)">
+                <source srcset="./images/Banner-M.png" media="(min-width:640px)">
+                <img src="./images/Banner-S.png" alt="">
+            </picture>
+        </div>
+        <div class="content">
+            <div class="photo">
+                <img src="./images/01h5.jpg" alt="">
+                <span>HTML5</span>
+            </div>
+            <div class="photo">
+                <img src="./images/02css3.jpg" alt="">
+                <span>CSS3</span>
+            </div>
+            <div class="photo">
+                <img src="./images/03less.jpg" alt="">
+                <span>LESS</span>
+            </div>
+            <div class="photo">
+                <img src="./images/04bootstrap.jpg" alt="">
+                <span>BootStrap</span>
+            </div>
+            <div class="photo">
+                <img src="./images/01h5.jpg" alt="">
+                <span>HTML5</span>
+            </div>
+            <div class="photo">
+                <img src="./images/02css3.jpg" alt="">
+                <span>CSS3</span>
+            </div>
+            <div class="photo">
+                <img src="./images/03less.jpg" alt="">
+                <span>LESS</span>
+            </div>
+            <div class="photo">
+                <img src="./images/04bootstrap.jpg" alt="">
+                <span>BootStrap</span>
+            </div>
+    </div>
+</body>
+</html>

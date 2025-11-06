@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩项目的伸缩性</title>
+    <style>
+        
+        .wapper{
+            width: 1000px;
+            height: 300px;
+            background-color: rgb(82, 255, 73);
+            margin: 20px auto;
+            display: flex;   
+        }
+        .wapper01{
+            width: 500px;
+            height: 300px;
+        }
+        .item{
+            /* 保障总宽总高不变 */
+            box-sizing: border-box;
+            padding: 10px;
+            color: aliceblue;
+            width: 220px;
+            height: 100px;
+            /* flex-basis权重大于父元素继承到的width */
+            /* flex-basis: 100px; */
+            /* 设置拓展比例 */
+            /* flex-grow: 1; */
+        }
+        .item01{
+            flex-grow: 1;
+            width: 100px;
+            background: #ecef42;
+        }
+        .item02{
+            flex-grow: 3;
+            width: 200px;
+            background: #42e9ef;
+        }
+        .item03{
+            flex-grow: 6;
+            width: 300px;
+            background: #be42ef;
+        }
+        .item04{
+            background: #ef42b8;
+        }
+        .item05{
+            background: #ef4279;
+        }
+        .item06{
+            background: #4545fa;
+        }
+    </style>
+</head>
+<body>
+    <h2>扩展 flex-grow</h2>
+    <div class="wapper">
+        <div class="item item01">item01</div>
+        <div class="item item02">item02</div>
+        <div class="item item03">item03</div>
+        <!-- <div class="item item04">item04</div>
+        <div class="item item05">item05</div>
+        <div class="item item06">item06</div> -->
+    </div>
+    <h2>收缩 flex-shrink</h2>
+    <div class="wapper wapper01">
+        <div class="item item01">item01</div>
+        <div class="item item02">item02</div>
+        <div class="item item03">item03</div>
+        <!-- <div class="item item04">item04</div>
+        <div class="item item05">item05</div>
+        <div class="item item06">item06</div> -->
+    </div>
+</body>
+</html>

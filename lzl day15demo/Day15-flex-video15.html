@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩盒布局实现元素居中-方案一/二</title>
+    <style>
+        /* 解决body和html没有高度的问题 百分比参照的视口高度*/
+        html,body{
+            height: 100%;
+        }
+        body{
+            margin: 0;
+            display: flex;
+            /* 方案一伸缩项目水平垂直居中 */
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        .box{
+            /* 方案二 伸缩项目设置外边距*/
+            margin: auto;
+            width: 400px;
+            padding: 20px;
+            color: aliceblue;
+            background-color: rgb(0, 255, 60);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        招他帮大秦作嗣是叹可韩药，疾冒尝准觉人张一是己上后不匹，君求牙定为过韩回不人德骨争活了自救，只兄极知争长入不我王孔其，承爱读杨定更一办此斯春将想了，娘秦的并心吞下以竟韩化高的的，原力极亓生时天人，大。
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { font-family: Arial; font-size: 14px; margin: 0; padding: 0; border: none; }
+        a { text-decoration: none; }
+        ul { list-style: none; }
+        img {display: block; }
+
+        body{
+            background-color: #efefef;
+        }
+        /* header start */
+        header{
+            display: flex;
+            height: 40px;
+            padding: 8px 0 15px;
+            background-color: #88c5e1;
+            border-bottom: 5px solid #54abd4;
+            justify-content: space-between;
+        }
+        .logo{
+            width: 25%;
+            background-image: url("images/Brand-S.png");
+            background-repeat: no-repeat;
+            background-size: auto 40px;
+        }
+        .search {
+            width: 60%;
+            display: flex;
+        }
+        .search input{
+            width: 80%;
+            height: 40px;
+            padding: 0 10px;
+            border: 1px solid #ccc;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        .search button{
+            width: 20%;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        /* header end */
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="search">
+            <input type="search">
+            <button>搜索</button>
+        </div>
+        <button class="menu"></button>
+    </header>
+</body>
+</html>

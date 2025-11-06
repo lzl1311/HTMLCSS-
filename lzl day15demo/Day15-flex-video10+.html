@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .wapper{
+            width: 1000px;
+            height: 500px;
+            background-color: rgb(82, 255, 73);
+            margin: 20px auto;
+            padding: 20px;
+            /*wapper 设置成伸缩容器  则wapper的子元素变成了伸缩项目*/
+            /* inline-flex和flex的区别就是能不能独占一行 */
+            /* 设置主轴方向 */
+            display: flex;
+            flex-direction: row;
+            /* flex-direction: row-reverse;
+            flex-direction: column;
+            flex-direction: column-reverse; */
+
+            /* 设置换行方式*/
+            /* 自动换行 */
+            flex-wrap:wrap ;
+            /* 没有换行 */
+            flex-wrap: nowrap;
+            /* 换行并翻转 */
+            flex-wrap: wrap-reverse;
+
+            /* 设置复合属性 */
+            flex-flow: column wrap;
+        }
+        .item{
+            /* 保障总宽总高不变 */
+            box-sizing: border-box;
+            padding: 10px;
+            color: aliceblue;
+            width: 220px;
+            height: 100px;
+        }
+        .item01{
+            background: #ecef42;
+        }
+        .item02{
+            background: #42e9ef;
+        }
+        .item03{
+            background: #be42ef;
+        }
+        .item04{
+            background: #ef42b8;
+        }
+        .item05{
+            background: #ef4279;
+        }
+        .item06{
+            background: #4545fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="wapper">
+        <div class="item item01">item01</div>
+        <div class="item item02">item02</div>
+        <div class="item item03">item03</div>
+        <div class="item item04">item04</div>
+        <div class="item item05">item05</div>
+        <div class="item item06">item06</div>
+    </div>
+</body>
+</html>

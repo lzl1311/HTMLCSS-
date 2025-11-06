@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩项目在侧轴的对齐方式</title>
+    <style>
+        
+        .wapper{
+            width: 1000px;
+            height: 400px;
+            background-color: rgb(82, 255, 73);
+            margin: 20px auto;
+            display: flex;
+        }
+        .wapper01{
+            /* 伸缩项目侧轴对齐方式 */
+            /*  拉伸的效果*/
+            align-items: stretch;
+            /* align-items: flex-start;
+            align-items: flex-end;
+            align-items: center;
+            align-items: baseline; */
+        }
+        .wapper02{
+            flex-wrap: wrap;
+            /* 设置侧轴对齐 */
+            /* align-items: stretch;
+            align-items:flex-start;
+            align-items: center; */
+
+            /* 侧轴对齐 针对多行 设置行与行之间如何对齐 */
+            align-content:stretch ;
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-between;
+            align-content: space-around;
+            align-content: space-evenly;
+        }
+        .item{
+            /* 保障总宽总高不变 */
+            box-sizing: border-box;
+            padding: 10px;
+            color: aliceblue;
+            width: 220px;
+            /* height: 100px; */
+        }
+        .item01{
+            background: #ecef42;
+        }
+        .item02{
+            background: #42e9ef;
+        }
+        .item03{
+            background: #be42ef;
+        }
+        .item04{
+            background: #ef42b8;
+        }
+        .item05{
+            background: #ef4279;
+        }
+        .item06{
+            background: #4545fa;
+        }
+    </style>
+</head>
+<body>
+    <h2>伸缩项目没有换行</h2>
+    <div class="wapper wapper01">
+        <div class="item item01">item01</div>
+        <div class="item item02">item02</div>
+        <div class="item item03">item03</div>
+        <!-- <div class="item item04">item04</div>
+        <div class="item item05">item05</div>
+        <div class="item item06">item06</div> -->
+    </div>
+
+    <h2>伸缩项目换行</h2>
+    <div class="wapper wapper02">
+        <div class="item item01">item01</div>
+        <div class="item item02">item02</div>
+        <div class="item item03">item03</div>
+        <div class="item item04">item04</div>
+        <div class="item item05">item05</div>
+        <div class="item item06">item06</div>
+    </div>
+</body>
+</html>

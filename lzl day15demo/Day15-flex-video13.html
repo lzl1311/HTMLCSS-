@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伸缩项目在主轴上的对齐方式</title>
+    <style>
+        
+        .wapper{
+            width: 1000px;
+            height: 300px;
+            background-color: rgb(82, 255, 73);
+            margin: 20px auto;
+            display: flex;
+
+            /* 设置伸缩项目在主轴上的对齐方式 */
+            /* 主轴起点对齐 */
+            justify-content: flex-start;
+            /* 主轴终点对齐 */
+            justify-content: flex-end;
+            /* 居中 */
+            justify-content: center;
+            /* 两端对齐 */
+            justify-content: space-between;
+            /* 两端多出一段间距，是中间间距的一半 */
+            justify-content: space-around;
+            /* 两端多处一段间距，和中间间距一样 */
+            justify-content: space-evenly;
+        }
+        .item{
+            /* 保障总宽总高不变 */
+            box-sizing: border-box;
+            padding: 10px;
+            color: aliceblue;
+            width: 220px;
+            height: 100px;
+        }
+        .item01{
+            background: #ecef42;
+        }
+        .item02{
+            background: #42e9ef;
+        }
+        .item03{
+            background: #be42ef;
+        }
+        .item04{
+            background: #ef42b8;
+        }
+        .item05{
+            background: #ef4279;
+        }
+        .item06{
+            background: #4545fa;
+        }
+    </style>
+</head>
+<body>
+    <div class="wapper">
+        <div class="item item01">item01</div>
+        <div class="item item02">item02</div>
+        <div class="item item03">item03</div>
+        <!-- <div class="item item04">item04</div>
+        <div class="item item05">item05</div>
+        <div class="item item06">item06</div> -->
+    </div>
+</body>
+</html>

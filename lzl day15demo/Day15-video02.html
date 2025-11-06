@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .top-liner,.but-liner{
+            background-color: rgb(249, 149, 196);
+            height: 3px;
+            width: 0;
+            transition-duration: 2s;
+        }
+        .top-liner{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .but-liner{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+        .box:hover .top-liner,.box:hover .but-liner{
+            width: 200px;
+        }
+        .box{
+            width: 200px;
+            height: 70px;
+            line-height: 70px;
+            margin: 200px auto;
+            background-color: #77f571;
+            text-align: center;
+            color: aqua;
+            font-size: 25px;
+            font-weight: bolder;
+            position: absolute;
+            transition-duration: 2s;
+        }
+        .box:hover{
+            background-color: #71f5f5;
+            color: #77f571;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+       <div class="top-liner"></div>
+       <div class="box-text">
+         GOOD NEIGHT
+       </div>
+       <div class="but-liner"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes jump{
+            100%{
+                transform: translateY(-10px);
+            }
+        }
+        .loding-box{
+            margin-top: 50px;
+            text-align: center;   
+        }
+        .loding-box span{
+            display: inline-block;
+            font-size: 30px;
+            animation:jump 300ms infinite alternate;
+        }
+        .loding-box span:nth-child(1){
+            animation-delay: 0ms;
+        }
+        .loding-box span:nth-child(2){
+            animation-delay: 100ms;
+        }
+        .loding-box span:nth-child(3){
+            animation-delay: 200ms;
+        }
+        .loding-box span:nth-child(4){
+            animation-delay: 300ms;
+        }
+        .loding-box span:nth-child(5){
+            animation-delay: 400ms;
+        }
+        .loding-box span:nth-child(6){
+            animation-delay: 500ms;
+        }
+        .loding-box span:nth-child(7){
+            animation-delay: 600ms;
+        }
+    </style>
+</head>
+<body>
+    <div class="loding-box">
+        <span>L</span>
+        <span>O</span>
+        <span>A</span>
+        <span>D</span>
+        <span>I</span>
+        <span>N</span>
+        <span>G</span>
+    </div>
+</body>
+</html>

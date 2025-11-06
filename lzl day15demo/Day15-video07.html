@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day15-video07</title>
+    <style>
+
+        @keyframes boxRotate{
+            /* 设置关键帧3D旋转，只有x,y轴作用，转360deg */
+            100%{transform: rotate3d(1,1,0,360deg);}
+        }
+        /* 因为box需要3d旋转或移动需要加上transform-style 
+        有时也需要加上perspective观察者距离以及原点*/
+        body{
+            transform-style: preserve-3d;
+        }
+        /* 因为box的子元素需要 3D旋转*/
+        .box{
+            margin: 250px auto;
+            width: 200px;
+            height: 200px;
+            position: relative;
+            transform-style:preserve-3d ;
+            transform-origin:center center -100px ;
+            animation: boxRotate 4s infinite linear;
+        }
+
+        .face{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            color: aliceblue;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .face-font{
+            background: rgba(240, 38, 38, 0.6);
+        }
+        
+        .face-left{
+            transform-origin: right;
+            background: rgba(109, 240, 38, 0.6);
+            /* 先移动到face-font左边，再改变旋转中心进行旋转，角度试一下 */
+            transform:translateX(-200px) rotateY(-90deg);
+        }
+        .face-right{
+            transform-origin: left;
+            background: rgba(38, 240, 223, 0.6);
+            transform: translateX(200px) rotateY(90deg);
+        }
+        .face-top{
+            transform-origin: bottom;
+            background: rgba(38, 48, 240, 0.6);
+            transform: translateY(-200px) rotateX(90deg);
+        }
+        .face-bottom{
+            transform-origin: top;
+            background: rgba(223, 38, 240, 0.6);
+            transform: translateY(200px) rotateX(-90deg);
+        }
+        .face-back{
+            background: rgba(250, 227, 46, 0.6);
+            transform: translateZ(-200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+            <div class="face face-font">前</div>
+            <div class="face face-back">后</div>
+            <div class="face face-left">左</div>
+            <div class="face face-right">右</div>
+            <div class="face face-top">上</div>
+            <div class="face face-bottom">下</div>
+    </div>
+</body>
+</html>

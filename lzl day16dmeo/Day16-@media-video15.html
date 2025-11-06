@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            background-color: aqua;
+        }
+        h1{
+            text-align: center;
+            font-size: 4em;
+            color: aliceblue;
+        }
+        /* 加不加only都一样 */
+        @media only screen{}
+        /* 视口宽度在600-800的样式  媒体特性后面是 : */
+        @media (min-width:600px) and (max-width:800px) {
+            body{
+                background-color: #900;
+            }
+        }
+        /* 400以下1000以上 */
+        @media (max-width:400px) , (min-width:1000px){
+            h1{
+                color: chartreuse;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>运算符</h1>
+</body>
+</html>

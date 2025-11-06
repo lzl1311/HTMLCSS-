@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix::after{
+             content: "";
+            display: block;
+            clear: both;
+        }
+        .items{
+            box-sizing: border-box;
+            width: 792px;
+            height: 133px;
+            margin:30px auto ;
+        }
+        .items-1{
+            height: 133px;
+            width: 220px;
+            float: left;
+            margin-right: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .items-2{
+            height: 133px;
+            width: 220px;
+            float: left;
+            margin-right: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .items-3{
+            height: 133px;
+            width: 332px;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .mask{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            color: aliceblue;
+            background-color: rgba(29, 29, 29, 0.5);
+            opacity: 0;
+        }
+        .icon{
+            width: 32px;
+            height: 34px;
+            background: url(../课堂案例/images/zoomico【微信：itcodeba\ 】.png);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+        }
+        img{
+            transition-duration: 2s;
+        }
+        .mask,.icon{
+            transition-duration: 1s;
+        }
+        .item:hover .icon{
+            opacity: 1;
+            background-position: 0 34px;
+        }
+        .item:hover .mask{
+            opacity: 1;
+        }
+        .items-1:hover img{
+            transform: rotate(10deg) scale(1.3);
+        }
+        .items-2:hover img{
+            transform: rotate(10deg) scale(1.3);
+        }
+        .items-3:hover img{
+            transform: rotate(5deg) scale(1.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="items clearfix">
+        <div class="item items-1">
+            <img src="../课堂案例/images/worksimg2【微信：itcodeba 】.png" alt="图片1">
+            <div class="mask">一江春水向东流</div>
+            <div class="icon"></div>
+        </div>
+        <div class="item items-2">
+            <img src="../课堂案例/images/worksimg3【微信：itcodeba 】.png" alt="图片2">
+            <div class="mask">一江春水向东流</div>
+            <div class="icon"></div>
+        </div>
+        <div class="item items-3">
+            <img src="../课堂案例/images/worksimg4【微信：itcodeba 】.png" alt="图片3">
+            <div class="mask">一江春水向东流</div>
+            <div class="icon"></div>
+        </div>
+    </div>
+   
+</body>
+</html>
