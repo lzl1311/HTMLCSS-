@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            background-image: url("images copy/bg.jpg");
+        }
+        .head{
+            display: flex;
+            height: 54px;
+            line-height: 54px;
+            padding: 20px;
+            background-color: #ccc;
+            justify-content: space-between;
+        }
+        .head nav a{
+            font-size: 20px;
+            color: aliceblue;
+            border: 1px solid #fff;
+            border-radius: 8px;
+            margin: 5px;
+            padding: 10px;
+        }
+        .content {
+            display: flex;
+            width: 840px;
+            height: 470px;
+            margin: auto;
+            list-style: none;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .content li{
+            width: 120px;
+            height: 200px; 
+            margin: 0 10px;
+        }
+        .content li img{
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        .content li:nth-child(1){
+            background-color: rgb(0, 137, 190);
+        }
+        .content li:nth-child(2){
+            background-color: rgb(5, 152, 64);
+        }
+        .content li:nth-child(3){
+            background-color: rgb(190, 0, 73);
+        }
+        .content li:nth-child(4){
+            background-color: rgb(120, 190, 0);
+        }
+        .content li:nth-child(5){
+            background-color: rgb(0, 92, 190);
+        }
+        .content li:nth-child(6){
+            background-color: rgb(190, 76, 0);
+        }
+    </style>
+</head>
+<body>
+    <div class="wapper">
+        <div class="head">
+            <div class="logo">
+                <img src="./images copy/atguigu-logo.png" alt="picture1">
+            </div>
+            <nav>
+                <a href="#">新学科</a>
+                <a href="#">学科简历</a>
+                <a href="#">学科内容</a>
+            </nav>
+        </div>
+        <ul class="content">
+            <li>
+                <img src="./images copy/ywfw_1.png" alt="">
+                <span>HTML</span>
+            </li>
+            <li>
+                <img src="./images copy/ywfw_2.png" alt="">
+                <span>HTML</span>
+            </li>
+            <li>
+                <img src="./images copy/ywfw_3.png" alt="">
+                <span>HTML</span>
+            </li>
+            <li>
+                <img src="./images copy/ywfw_4.png" alt="">
+                <span>HTML</span>
+            </li>
+            <li>
+                <img src="./images copy/ywfw_5.png" alt="">
+                <span>HTML</span>
+            </li>
+            <li>
+                <img src="./images copy/ywfw_6.png" alt="">
+                <span>HTML</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

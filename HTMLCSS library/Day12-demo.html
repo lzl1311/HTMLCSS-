@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        *{
+            box-sizing: border-box;
+        }
+        .small{
+            height: 100px;
+            width: 600px;
+            background-color: #efefef;
+        }
+        .small img{
+            width: 100px;
+        }
+        .big{
+            position: relative;
+            height: 500px;
+            width: 600px;
+            background-color: #efefef;
+            margin:10px 0;
+             overflow: hidden;
+        }
+        .big img{
+            position: absolute;
+            top: 0;
+            width: 500px;
+             z-index: 1; /* 默认层级 */
+        }
+        .big input:checked + img{
+            z-index: 2;
+        }
+        .big input {
+            display: none;
+        }
+        .big input:first-child + img{
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="wapper">
+        <div class="small">
+            <label for="img01"><img src="../Day12css/巩亚芬-Day12作业/images/01-小乐【微信：itcodeba 】.jpg" alt="小乐01"></label>
+            <label for="img02"><img src="../Day12css/巩亚芬-Day12作业/images/02-小乐【微信：itcodeba 】.jpg" alt="小乐02"></label>
+            <label for="img03"><img src="../Day12css/巩亚芬-Day12作业/images/03-小乐【微信：itcodeba 】.jpg" alt="小乐03"></label>
+            <label for="img04"><img src="../Day12css/巩亚芬-Day12作业/images/04-小乐【微信：itcodeba 】.jpg" alt="小乐04"></label>
+            <label for="img05"><img src="../Day12css/巩亚芬-Day12作业/images/05-小乐【微信：itcodeba 】.jpg" alt="小乐05"></label>
+        </div>
+        <div class="big" >
+            <input type="radio" id="img01" name="img">
+            <img src="../Day12css/巩亚芬-Day12作业/images/01-小乐【微信：itcodeba 】.jpg" alt="小乐01" >
+            <input type="radio" id="img02" name="img">
+            <img src="../Day12css/巩亚芬-Day12作业/images/02-小乐【微信：itcodeba 】.jpg" alt="小乐02">
+            <input type="radio" id="img03" name="img">
+            <img src="../Day12css/巩亚芬-Day12作业/images/03-小乐【微信：itcodeba 】.jpg" alt="小乐03" >
+            <input type="radio" id="img04" name="img">
+            <img src="../Day12css/巩亚芬-Day12作业/images/04-小乐【微信：itcodeba 】.jpg" alt="小乐04">
+            <input type="radio" id="img05" name="img">
+            <img src="../Day12css/巩亚芬-Day12作业/images/05-小乐【微信：itcodeba 】.jpg" alt="小乐05">
+        </div>
+    </div>
+</body>
+</html>

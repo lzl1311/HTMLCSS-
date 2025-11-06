@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 全局注释 */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .banxin{
+            width: 960px;
+            /* 居中显示 重要 */
+            margin: 0 auto;
+            /* text-align: center; */
+            
+        }
+        /* 左浮动 */
+        .leftfix{
+            float: left;
+        }
+        /* 右浮动 */
+        .rightfix{
+            float: right;
+        }
+        /* 清除 */
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /* headstart */
+        .logo{
+            width: 200px;
+            height: 80px;
+            background-color: #ccc;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        .banner1{
+            width: 540px;
+            height: 80px;
+            background-color: #ccc;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        .banner2{
+            width: 200px;
+            height: 80px;
+            background-color: #ccc;
+            margin-bottom: 10px;
+        }
+        /* headsend */
+        /* 导航部分开始 */
+        .daohang{
+            background-color: #ccc;
+            width: 960px;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+        /* 导航部分结束 */
+        /* 身体开始 */
+        .rows{
+            margin-bottom: 10px;
+        }
+        .lanmu{
+            margin-right: 10px;
+        }
+        .body{
+            width: 960px;
+        }
+        .bodyleft{
+            width: 750px;
+            float: left;
+        }
+    
+        .lanmu1{
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 368px;
+            height: 198px;
+        }
+        .lanmu2{
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 178px;
+            height: 198px;
+        }
+        .lanmu3{
+            background-color: #fff;
+            border: 1px solid #ccc;
+            width: 198px;
+            height: 128px;
+            margin-bottom: 10px;
+        }
+        .rows .lanmu:last-child{
+            margin-right: 0;
+        }
+        /* 身体结束 */
+        
+    </style>
+</head>
+<body>
+    <div class="banxin">
+        <!-- 头部 -->
+        <div class="head clearfix">
+            <div class="logo leftfix">LOGO</div>
+            <div class="banner1 leftfix">BNNNER1</div>
+            <div class="banner2 leftfix">BNNNER2</div>
+        </div>
+        <!-- 导航 -->
+        <div class="clearfix">
+            <div class="daohang leftfix">导航</div>
+        </div> 
+        <!-- 身体 -->
+         <div class="body clearfix">
+            <div class="bodyleft ">
+                <div class="rows clearfix">
+                    <div class="lanmu lanmu1 leftfix">栏目一</div>
+                    <div class="lanmu lanmu1 leftfix">栏目二</div>
+                </div>
+                <div class="rows clearfix">
+                    <div class="lanmu lanmu2 leftfix">栏目三</div>
+                    <div class="lanmu lanmu2 leftfix">栏目四</div>
+                    <div class="lanmu lanmu2 leftfix">栏目五</div>
+                    <div class="lanmu lanmu2 leftfix">栏目六</div>
+                </div>
+            </div>
+            <div class="rightfix">
+                <div class="lanmu3">栏目七</div>
+                <div class="lanmu3">栏目八</div>
+                <div class="lanmu3">栏目九</div>
+            </div>
+         </div>    
+    </div>   
+</body>
+</html>
